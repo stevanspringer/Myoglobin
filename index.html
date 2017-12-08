@@ -105,11 +105,13 @@
       Panel C shows the mutational neighborhood, the phenoypic effects of all possible single mutations, for each allele.<BR>
       Phenotypes are estimated on the 1mbn.pdb structure using propka 3.1 (Isoelectric Point) and FoldX 4.0 (Folding Energy).
     </p>
-    
+      
     <p><b>
       Hover the mouse over the panel B legend to see paths for each mutational class, or over points to see each mutational neighborhood.<BR><BR>
-     </p></b>
+    </p></b>
     
+      <p><b>
+      
   <img src="none.jpg" name="graph" usemap="#points" />
 
   <map name="points">
@@ -206,7 +208,39 @@
     <area shape="circle"	coords="820,635,10"	onMouseOver="graph.src='64.jpg'"	onMouseOut="graph.src='64.jpg'"/>
    
   </map> 
+    
+  <p><b><BR><BR>
+      JUST_SO: Juxtaposed Unweighted-Space Test of Selective Origin.</b><BR>
+      The probability of a phenotypic change in the direction of the derived trait depends on:<BR>
+      -   the spectrum of phenotypic effects in each intermediate allele's mutational neighborhood;<BR>
+      -   a bias parameter (w) that modifies the probability of taking a step in either direction. <BR><BR>
       
+      For each trait, we estimate the maximum likelihood of the bias parameter (w) comparing:<BR>
+      -   an unweighted space (null, w = 0) whose step probabilities depend only on each mutational neighborhood.<BR>
+      -   a weighted space (alternative, -1 < w < 1) whose step probabilities are biased up or down by some proportion.<BR>  
+    
+    The product of steps in each path is summed across all possible paths to estimate the likelihood of the path ensemble.<BR>
+    The logarithm of these values is compared in a Chi-squared test with 1 degree of freedom. 
+
+    Trait Constraint 	Null	Lnl(null)	np(null)	Alternate	Lnl(Alt)	np(Alt)	2deltaL	Delta DF	P	<BR>
+    Energy - All	w = 0	0.650071449	0	w = 0.8	2.979430383	1	4.658717868	1	0.030896254	*<BR>
+      Energy - Amniotes	w = 0	1.95280735	0	w = 0.6	2.98167012	1	3.71593932	1	0.053895292	NS<BR>
+      Energy - Mammals	w = 0	2.065186942	0	w = 0.6	2.985393031	1	1.84041218	1	0.174902645	NS<BR>
+      Energy - Ungulates	w = 0	2.209225574	0	w = 0.6	2.974145075	1	1.529839002	1	0.216136609	NS<BR>
+      Energy - Cetacea	w = 0	2.460982219	0	w = 0.5	2.976521173	1	1.031077906	1	0.309905633	NS<BR>
+										
+Charge - All	w = 0	3.97603526	0	w = 0.9	6.331051852	1	4.710033184	1	0.029987073	*<BR>
+Charge - Amniotes	w = 0	4.090192998	0	w = 0.9	6.344079676	1	4.507773356	1	0.033741138	*<BR>
+Charge - Mammals	w = 0	4.1110952	0	w = 0.9	6.346407914	1	4.470625428	1	0.034482367	*<BR>
+Charge - Ungulates	w = 0	4.050996595	0	w = 0.9	6.340102806	1	4.578212422	1	0.032380978	*<BR>
+Charge - Cetacea	w = 0	4.064164761	0	w = 0.9	6.341423411	1	4.554517301	1	0.032832017	*<BR>
+										
+Hydro - All	w = 0	2.564290671	0	w = 0.1	2.599332339	1	0.070083335	1	0.791215484	NS<BR>
+Hydro - Amniotes	w = 0	2.418052827	0	w = 0.3	2.595018944	1	0.353932234	1	0.551895584	NS<BR>
+Hydro - Mammals	w = 0	2.393472501	0	w = 0.3	2.594455516	1	0.40196603	1	0.52607566	NS<BR>
+Hydro - Ungulates	w = 0	2.398056853	0	w = 0.2	2.591792031	1	0.387470356	1	0.533632096	NS<BR>
+Hydro - Cetacea	w = 0	2.449467907	0	w = 0.2	2.579130183	1	0.259324552	1	0.610584577	NS<BR>
+    </p> 
   </body>
 
 </html>
