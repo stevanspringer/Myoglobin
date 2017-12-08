@@ -220,27 +220,71 @@
       -   a weighted space (alternative, -1 < w < 1) whose step probabilities are biased up or down in proporion to w.<BR><BR>  
     
     The product of steps in each path is summed across all possible paths to estimate the likelihood of the path ensemble.<BR>
-    The log-likelihoods of the null and maximum liklihood alternative are compared using a Chi-squared test with 1 degree of freedom. <BR><BR>
+    Twice the difference in log-likelihoods of the null and maximum liklihood alternative models are compared using a Chi-squared test with 1 degree of freedom. <BR><BR>
 
-    Trait	Constraint 	Null	Lnl(null)	np(null)	Alternate	Lnl(Alt)	np(Alt)	2deltaL	Delta DF	P	<BR>
-    Energy  	All	w = 0	0.650071449	0	w = 0.8	2.979430383	1	4.658717868	1	0.030896254	*<BR>
-      Energy - Amniotes	w = 0	1.95280735	0	w = 0.6	2.98167012	1	3.71593932	1	0.053895292	NS<BR>
-      Energy - Mammals	w = 0	2.065186942	0	w = 0.6	2.985393031	1	1.84041218	1	0.174902645	NS<BR>
-      Energy - Ungulates	w = 0	2.209225574	0	w = 0.6	2.974145075	1	1.529839002	1	0.216136609	NS<BR>
-      Energy - Cetacea	w = 0	2.460982219	0	w = 0.5	2.976521173	1	1.031077906	1	0.309905633	NS<BR>
-										
-Charge - All	w = 0	3.97603526	0	w = 0.9	6.331051852	1	4.710033184	1	0.029987073	*<BR>
-Charge - Amniotes	w = 0	4.090192998	0	w = 0.9	6.344079676	1	4.507773356	1	0.033741138	*<BR>
-Charge - Mammals	w = 0	4.1110952	0	w = 0.9	6.346407914	1	4.470625428	1	0.034482367	*<BR>
-Charge - Ungulates	w = 0	4.050996595	0	w = 0.9	6.340102806	1	4.578212422	1	0.032380978	*<BR>
-Charge - Cetacea	w = 0	4.064164761	0	w = 0.9	6.341423411	1	4.554517301	1	0.032832017	*<BR>
-										
-Hydro - All	w = 0	2.564290671	0	w = 0.1	2.599332339	1	0.070083335	1	0.791215484	NS<BR>
-Hydro - Amniotes	w = 0	2.418052827	0	w = 0.3	2.595018944	1	0.353932234	1	0.551895584	NS<BR>
-Hydro - Mammals	w = 0	2.393472501	0	w = 0.3	2.594455516	1	0.40196603	1	0.52607566	NS<BR>
-Hydro - Ungulates	w = 0	2.398056853	0	w = 0.2	2.591792031	1	0.387470356	1	0.533632096	NS<BR>
-Hydro - Cetacea	w = 0	2.449467907	0	w = 0.2	2.579130183	1	0.259324552	1	0.610584577	NS<BR>
-    </p> 
+<style>
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #99ccff;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #99ccff;
+}
+</style>
+</head>
+<body>
+
+<table>
+  <tr>
+    <th>Trait</th>
+    <th>Bias</th>
+    <th>logL(null)</th>
+    <th>logL(alternate)</th>
+    <th>2DeltaL</th>
+    <th>DF</th>
+    <th>P</th>
+
+  </tr>
+  <tr>
+    <td>Energy</td>
+    <td>w = 0.6</td>
+    <td>2.0651</td>
+    <td>2.9853</td>
+    <td>1.8404</td>
+    <td>1</td>
+    <td>0.1749</td>
+  </tr>
+  <tr>
+    <td>Charge</td>
+    <td>w = 0.99 </td>
+    <td>4.1110952</td>    
+    <td>6.346407914</td>
+    <td>4.470625428</td>
+    <td>1</td>
+    <td>0.0344*</td>
+  </tr>
+  <tr>
+    <td>Hydrophobicity</td>
+    <td>w = 0.99 </td>
+    <td>2.3934</td>    
+    <td>2.5944</td>
+    <td>0.4019</td>
+    <td>1</td>
+    <td>0.5260</td>
+  </tr>
+
+</table>
+
+</body>
+</html>
   </body>
 
 </html>
