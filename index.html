@@ -217,13 +217,13 @@
       
       For each trait, we estimate the maximum likelihood of the bias parameter (w) comparing:<BR>
       -   an unweighted space (null, w = 0) whose step probabilities depend only on each mutational neighborhood.<BR>
-      -   a weighted space (alternative, -1 < w < 1) whose step probabilities are biased up or down by some proportion.<BR>  
+      -   a weighted space (alternative, -1 < w < 1) whose step probabilities are biased up or down in proporion to w.<BR><BR>  
     
     The product of steps in each path is summed across all possible paths to estimate the likelihood of the path ensemble.<BR>
-    The logarithm of these values is compared in a Chi-squared test with 1 degree of freedom. 
+    The log-likelihoods of the null and maximum liklihood alternative are compared using a Chi-squared test with 1 degree of freedom. <BR><BR>
 
-    Trait Constraint 	Null	Lnl(null)	np(null)	Alternate	Lnl(Alt)	np(Alt)	2deltaL	Delta DF	P	<BR>
-    Energy - All	w = 0	0.650071449	0	w = 0.8	2.979430383	1	4.658717868	1	0.030896254	*<BR>
+    Trait	Constraint 	Null	Lnl(null)	np(null)	Alternate	Lnl(Alt)	np(Alt)	2deltaL	Delta DF	P	<BR>
+    Energy  	All	w = 0	0.650071449	0	w = 0.8	2.979430383	1	4.658717868	1	0.030896254	*<BR>
       Energy - Amniotes	w = 0	1.95280735	0	w = 0.6	2.98167012	1	3.71593932	1	0.053895292	NS<BR>
       Energy - Mammals	w = 0	2.065186942	0	w = 0.6	2.985393031	1	1.84041218	1	0.174902645	NS<BR>
       Energy - Ungulates	w = 0	2.209225574	0	w = 0.6	2.974145075	1	1.529839002	1	0.216136609	NS<BR>
