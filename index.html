@@ -104,7 +104,7 @@
       Panel B compares the values of isoelectric point and folding energy for each allele.<BR>
       Panel C shows the mutational neighborhood, the phenoypic effects of all possible single mutations, for each allele.<BR>
       Phenotypes are estimated on the 1mbn.pdb structure using propka 3.1 (Isoelectric Point) FoldX 4.0 (Folding Energy) and freesasa 2.0.2 (Hydrophobicity, not shown).<BR>
-      The space of alternatives includes all amino acid variants that have been observed in a functional Mammalian myoglobin. 
+      The space of alternatives includes all amino acid variants that have been observed in all currently sequenced functional Mammalian myoglobins. 
     </p>
       
     <p><b>
@@ -214,12 +214,12 @@
     The probability of a change toward or away from the derived state is assumed to depend on:<BR>
       1) the spectrum of phenotypic effects in each intermediate allele's mutational neighborhood;<BR>
       2) a bias parameter (w) that modifies the probability of taking a step in either direction. <BR><BR>
-        
+    
+    The likelihood of the path ensemble is the product of all steps in each path summed across every path.<BR>
     For each trait, we estimate the maximum likelihood of the bias parameter (w) and compare:<BR>
     the unweighted space <b>(null, w = 0)</b> whose step probabilities depend only on each mutational neighborhood, and<BR>
     a weighted space <b>(alternative, -1 < w < 1)</b> whose step probabilities are biased up or down in proporion to w. <BR><BR>  
     
-    The likelihood of the path ensemble is the product of all steps in each path summed across every path.<BR>
     Twice the difference of the null and alternative model log-likelihoods is compared against the chi-squared expectation. <BR>
     </p>
 
