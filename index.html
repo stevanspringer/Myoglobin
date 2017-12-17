@@ -100,22 +100,9 @@
 
 
   <body> 
-
-    <p><b>
-      An adaptive walk through the phenotype space of whale myoglobin.</b><BR>
-      Panel A shows mutational paths from ancestral (A) to derived (D) through all possible intermediate alleles.<BR>
-      Panel B compares the values of isoelectric point and folding energy for each allele.<BR>
-      Panel C shows the mutational neighborhood, the phenoypic effects of all possible single mutations, for each allele.<BR>
-      Phenotypes are estimated on the 1mbn.pdb structure using propka 3.1 (Isoelectric Point) FoldX 4.0 (Folding Energy) and freesasa 2.0.2 (Hydrophobicity, not shown).<BR>
-      The space of alternatives includes all amino acid variants that have been observed in all currently sequenced functional Mammalian myoglobins. 
-    </p>
-      
-    <p><b>
-      Hover the mouse over the panel B legend to see paths for each mutation or step. Hover each point in Panel B to see its mutational neighborhood.<BR>
-      Hover Panel C to see all paths and the phenotype space (the combined mutational neighborhoods of all intermediate alleles).<BR><BR>
-    </p></b>
   <img src="myoglobin-text1.jpg" />
-        
+  <BR>
+  <BR>
   <img src="none.jpg" name="graph" usemap="#points" />
 
   <map name="points">
@@ -212,83 +199,9 @@
     <area shape="circle"	coords="820,635,10"	onMouseOver="graph.src='64.jpg'"	onMouseOut="graph.src='64.jpg'"/>
    
   </map> 
-  <BR>  
+  <BR>
+  <BR>
   <img src="myoglobin-text2.jpg" />
 
-    <p><b>
-    Juxtaposed Unweighted-Space Test of Selective Origin (JUST_SO).</b><BR>
-    The probability of a change toward or away from the derived state is assumed to depend on:<BR>
-      1) the spectrum of phenotypic effects in each intermediate allele's mutational neighborhood;<BR>
-      2) a bias parameter (w) that modifies the probability of taking a step in either direction. <BR><BR>
-    
-    The likelihood of the path ensemble is the product of all steps in each path summed across every path.<BR>
-    For each trait, we estimate the maximum likelihood of the bias parameter (w) and compare:<BR>
-    the unweighted space <b>(null, w = 0)</b> whose step probabilities depend only on each mutational neighborhood, and<BR>
-    a weighted space <b>(alternative, -1 < w < 1)</b> whose step probabilities are biased up or down in proporion to w. <BR><BR>  
-    
-    Twice the difference of the null and alternative model log-likelihoods is compared against the chi-squared expectation. <BR>
-    </p>
-
-<style>
-table {
-    font-family: arial, sans-serif;
-    border-collapse: collapse;
-    width: 75%;
-}
-
-td, th {
-    border: 1px solid #99ccff;
-    text-align: left;
-    padding: 8px;
-}
-
-tr:nth-child(even) {
-    background-color: #99ccff;
-}
-</style>
-</head>
-<body>
-
-<table>
-  <tr>
-    <th>Trait</th>
-    <th>Bias</th>
-    <th>logL(null, unweighted space)</th>
-    <th>logL(alternative, weighted space)</th>
-    <th>2deltaL</th>
-    <th>p-value (X^2, df = 1)</th>
-
-  </tr>
-  <tr>
-    <td>Energy</td>
-    <td>w = 0.6</td>
-    <td>2.0652</td>
-    <td>2.9854</td>
-    <td>1.8404</td>
-    <td>0.1749</td>
-  </tr>
-  <tr>
-    <td>Charge</td>
-    <td>w = 0.9</td>
-    <td>4.1111</td>    
-    <td>6.3464</td>
-    <td>4.4706</td>
-    <td><b>0.0345 *</b></td>
-  </tr>
-  <tr>
-    <td>Hydrophobicity</td>
-    <td>w = 0.3</td>
-    <td>2.3935</td>    
-    <td>2.5945</td>
-    <td>0.4020</td>
-    <td>0.5261</td>
-  </tr>
-
-</table>
-    <p><b>
-      In this case, folding energy and hydrophobicity could be spandrels. They change as expected given the unweighted space.<BR>
-      Isoelectric point does not change according to the space alone. To explain the observed difference requires a bias toward the derived state.<BR>
-      Selection on myoglobin targeted a trait that corresponds with protein isoelectric point. The changes in folding stability and hydrophobicity could have evolved as byproducts.<BR>
-      </p></b>
 </body>
 </html>
